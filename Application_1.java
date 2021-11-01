@@ -6,7 +6,7 @@ import java.util.Scanner;
 // Driver class to test implementation of the Comparable interface.
 //********************************************************************
 
-public class Application {
+public class Application_1 {
 
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
