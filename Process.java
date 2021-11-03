@@ -25,7 +25,7 @@ public class Process implements Priority, Comparable<Process> {
 	public Process() {
 		this.processID = "";
 		this.priority = 0;
-	}//end empty-argument constructor
+	}// end empty-argument constructor
 
 	/**
 	 * Constructor to create object with common usage. This is the preferred
@@ -37,7 +37,7 @@ public class Process implements Priority, Comparable<Process> {
 		super();
 		this.processID = processID;
 		this.priority = priority;
-	}//end preferred constructor
+	}// end preferred constructor
 
 	/**
 	 * Compares the priorities for this process and the input process. Returns 0 if
@@ -53,7 +53,7 @@ public class Process implements Priority, Comparable<Process> {
 			return 1;
 		else
 			return -1;
-	}//end compareTo
+	}// end compareTo
 
 	/**
 	 * Getter for processID
@@ -62,7 +62,7 @@ public class Process implements Priority, Comparable<Process> {
 	 */
 	public String getProcessID() {
 		return processID;
-	}//end getProcessID
+	}// end getProcessID
 
 	/**
 	 * Setter for processID
@@ -71,7 +71,7 @@ public class Process implements Priority, Comparable<Process> {
 	 */
 	public void setProcessID(String processID) {
 		this.processID = processID;
-	}//end setProcessID
+	}// end setProcessID
 
 	/**
 	 * Getter for priority
@@ -80,7 +80,7 @@ public class Process implements Priority, Comparable<Process> {
 	 */
 	public int getPriority() {
 		return priority;
-	}//end getPriority
+	}// end getPriority
 
 	/**
 	 * Setter for priority
@@ -89,11 +89,11 @@ public class Process implements Priority, Comparable<Process> {
 	 */
 	public void setPriority(int priority) {
 		this.priority = priority;
-	}//end setPriority
+	}// end setPriority
 
 	@Override
 	public String toString() {
 		return "Process [processID=" + processID + ", priority=" + priority + "]";
-	}//end toString
+	}// end toString
 
-}//end class
+}// end class
