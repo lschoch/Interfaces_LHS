@@ -8,7 +8,10 @@
  */
 
 public class Application_2 {
-
+	/**
+	 * Main method for the Application_2 class
+	 * @param args this method does not use command line arguments
+	 */
 	public static void main(String[] args) {
 
 		// Testing the Task class

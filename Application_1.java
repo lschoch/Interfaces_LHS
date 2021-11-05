@@ -1,4 +1,3 @@
-import java.util.Scanner;
 
 /**
  * Driver class to test constructors, methods, getters/setters for all classes
@@ -9,29 +8,63 @@ import java.util.Scanner;
  */
 
 public class Application_1 {
-
+	/**
+	 * Main method for the Application_1 class
+	 * @param args this method does not use command line arguments
+	 */
 	public static void main(String[] args) {
-		Scanner s = new Scanner(System.in);
-		System.out.println("Enter numerator for first rational number: ");
-		int n1 = s.nextInt();
-		System.out.println("Enter denominator for first rational number: ");
-		int d1 = s.nextInt();
-		System.out.println("Enter numerator for second rational number: ");
-		int n2 = s.nextInt();
-		System.out.println("Enter denominator for second rational number: ");
-		int d2 = s.nextInt();
+		// Create 3 rational numbers for testing
+		RationalNumber r1 = new RationalNumber(49999, 100000);
+		RationalNumber r2 = new RationalNumber(1, 2);
+		RationalNumber r3 = new RationalNumber(3, 4);
+		
+		String str1 = r1.getNumerator()+"/"+r1.getDenominator();
+		String str2 = r2.getNumerator()+"/"+r2.getDenominator();
+		String str3 = r3.getNumerator()+"/"+r3.getDenominator();
+		
+		// Format and print output to console
+		System.out.println("\nTesting compareTo method:\n");
+		System.out.printf("%-16s", " r2");
+		System.out.printf("%-16s", "| r2");
+		System.out.printf("%-18s", "| r1.compareTo(r2)");
+		System.out.println();
+		System.out.println("----------------|---------------|-----------------");
+		
+		// Print results of compareTo method using combinations of the rational
+		// numbers created for testing
+		System.out.printf("%-16s", " "+str1);
+		System.out.printf("%-16s", "| "+str2);
+		System.out.printf("%-18s", "| "+padR(r1, r2));
+		System.out.println();
+		
+		System.out.printf("%-16s", " "+str2);
+		System.out.printf("%-16s", "| "+str3);
+		System.out.printf("%-18s", "| "+padR(r2, r3));
+		System.out.println();
+		
+		System.out.printf("%-16s", " "+str3);
+		System.out.printf("%-16s", "| "+str2);
+		System.out.printf("%-18s", "| "+padR(r3, r2));
+		System.out.println();
 
-		RationalNumber r1 = new RationalNumber(n1, d1);
-		RationalNumber r2 = new RationalNumber(n2, d2);
-		int compare = r1.compareTo(r2);
-		System.out.println("r1.compareTo(r2) returns " + compare);
-		if (compare == 0)
-			System.out.println("r1 and r2 are essentially equal");
-		else if (compare == -1)
-			System.out.println("r1 is greater than r2");
-		else
-			System.out.println("r1 is less than r2");
-		s.close();
 	}// end main
-
+	
+	/**
+	 * This method pads the result of the compareTo method to align the data 
+	 * in the output table.
+	 * 
+	 * @param rA the first rational number for the comparison
+	 * @param rB the second rational number for the comparison
+	 * @return the padded string result of the comparison
+	 */
+	public static String padR(RationalNumber rA, RationalNumber rB) {
+		int comp = rA.compareTo(rB);
+		
+		if (comp >= 0)
+				return " "+comp;
+		else
+			return ""+comp;
+		
+	}//end padR	
+	
 }// end class
