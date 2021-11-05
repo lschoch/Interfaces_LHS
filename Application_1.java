@@ -24,7 +24,7 @@ public class Application_1 {
 		
 		// Format and print output to console
 		System.out.println("\nTesting compareTo method:\n");
-		System.out.printf("%-16s", " r2");
+		System.out.printf("%-16s", " r1");
 		System.out.printf("%-16s", "| r2");
 		System.out.printf("%-18s", "| r1.compareTo(r2)");
 		System.out.println();
