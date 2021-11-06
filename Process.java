@@ -50,9 +50,9 @@ public class Process implements Priority, Comparable<Process> {
 		if (this.priority == process.getPriority())
 			return 0;
 		else if (this.priority < process.getPriority())
-			return 1;
-		else
 			return -1;
+		else
+			return 1;
 	}// end compareTo
 
 	/**

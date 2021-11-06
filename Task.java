@@ -64,9 +64,9 @@ public class Task implements Priority, Comparable<Task> {
 		if (this.priority == task.getPriority())
 			return 0;
 		else if (this.priority < task.getPriority())
-			return 1;
-		else
 			return -1;
+		else
+			return 1;
 	}// end compareTo
 
 	/**
