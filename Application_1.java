@@ -46,7 +46,7 @@ public class Application_1 {
 		System.out.printf("%-16s", "| "+str2);
 		System.out.printf("%-18s", "| "+padR(r3, r2));
 		System.out.println();
-
+		
 	}// end main
 	
 	/**

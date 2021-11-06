@@ -1,6 +1,6 @@
 
 /**
- * Driver class to test constructors, methods, getters/setters for all classes
+ * Driver class to test conpriorityuctors, methods, getters/setters for all classes
  * of Problem 2
  * 
  * @author Larry Schoch
@@ -40,15 +40,37 @@ public class Application_2 {
 		System.out.println("t2.toString(): " + t2.toString());
 
 		// Testing compareTo method
-		System.out.println("\nTesting compareTo method:");
-		System.out.println(" t1\tt2\tt1.compareTo(t2)");
-		System.out.println("----   ----    ------------------");
-		System.out.println("  " + t1.getPriority() + "\t" + t2.getPriority() + "\t       " + t1.compareTo(t2));
+		System.out.println("\nTesting compareTo method (compares the priorities of two tasks):");
+		System.out.printf("%-11s", " priority1");
+		System.out.printf("%-12s", "| priority2");
+		System.out.printf("%-16s", "| t1.compareTo(t2)");
+		System.out.println();
+		System.out.println("-----------|-----------|-----------------");
+		
+		int priority1 = t1.getPriority();
+		int priority2 = t2.getPriority();
+		int compare = t1.compareTo(t2);
+		System.out.printf("%-11s", " "+pad(priority1));
+		System.out.printf("%-12s", "| "+pad(priority2));
+		System.out.printf("%-16s", "| "+pad(compare));
+		System.out.println();
+		
 		t1.setPriority(Priority.MIN_PRIORITY);
-		System.out.println("  " + t1.getPriority() + "\t" + t2.getPriority() + "\t       " + t1.compareTo(t2));
+		priority1 = t1.getPriority();
+		compare = t1.compareTo(t2);
+		System.out.printf("%-11s", " "+pad(priority1));
+		System.out.printf("%-12s", "| "+pad(priority2));
+		System.out.printf("%-16s", "| "+pad(compare));
+		System.out.println();
+		
 		t1.setPriority(Priority.MAX_PRIORITY);
-		System.out.println(" " + t1.getPriority() + "\t" + t2.getPriority() + "\t      " + t1.compareTo(t2));
-
+		priority1 = t1.getPriority();
+		compare = t1.compareTo(t2);
+		System.out.printf("%-11s", " "+pad(priority1));
+		System.out.printf("%-12s", "| "+pad(priority2));
+		System.out.printf("%-16s", "| "+pad(compare));
+		System.out.println();
+		
 		// Testing the Process class
 		System.out.println("\n\n-------------------------- TESTING PROCESS CLASS" + " -------------------------");
 
@@ -73,15 +95,54 @@ public class Application_2 {
 		System.out.println("p2.toString(): " + p2.toString());
 
 		// Testing compareTo method
-		System.out.println("\nTesting compareTo method:");
-		System.out.println(" p1\tp2\tp1.compareTo(p2)");
-		System.out.println("----   ----    ------------------");
-		System.out.println("  " + p1.getPriority() + "\t" + p2.getPriority() + "\t       " + p1.compareTo(p2));
+		System.out.println("\nTesting compareTo method (compares the priorities of two processes):");
+		System.out.printf("%-11s", " priority1");
+		System.out.printf("%-12s", "| priority2");
+		System.out.printf("%-16s", "| p1.compareTo(p2)");
+		System.out.println();
+		System.out.println("-----------|-----------|-----------------");
+		
+		priority1 = p1.getPriority();
+		priority2 = p2.getPriority();
+		compare = p1.compareTo(p2);
+		System.out.printf("%-11s", " "+pad(priority1));
+		System.out.printf("%-12s", "| "+pad(priority2));
+		System.out.printf("%-16s", "| "+pad(compare));
+		System.out.println();
+		
 		p1.setPriority(Priority.MIN_PRIORITY);
-		System.out.println("  " + p1.getPriority() + "\t" + p2.getPriority() + "\t       " + p1.compareTo(p2));
+		priority1 = p1.getPriority();
+		compare = p1.compareTo(p2);
+		System.out.printf("%-11s", " "+pad(priority1));
+		System.out.printf("%-12s", "| "+pad(priority2));
+		System.out.printf("%-16s", "| "+pad(compare));
+		System.out.println();
+		
 		p1.setPriority(Priority.MAX_PRIORITY);
-		System.out.println(" " + p1.getPriority() + "\t" + p2.getPriority() + "\t      " + p1.compareTo(p2));
-
+		priority1 = p1.getPriority();
+		compare = p1.compareTo(p2);
+		System.out.printf("%-11s", " "+pad(priority1));
+		System.out.printf("%-12s", "| "+pad(priority2));
+		System.out.printf("%-16s", "| "+pad(compare));
+		System.out.println();
+		
 	}// end main
+	
+	/**
+	 * Method to pad priority to align the data in the output table.
+	 * 
+	 * @param priority the priority to be padded
+	 * @return the padded string
+	 */
+	public static String pad(int padInt) {
+		if (padInt < 0 || padInt >= 10)
+			return ""+padInt;
+		else if (padInt < 10)
+			return " "+padInt;
+		else
+			return ""+padInt;
+	}//end pad
+	
+	
 
 }// end class
