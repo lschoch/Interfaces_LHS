@@ -39,7 +39,7 @@ public class Application_2 {
 		System.out.println("t1.toString(): " + t1.toString());
 		System.out.println("t2.toString(): " + t2.toString());
 
-		// Testing compareTo method
+		// Testing compareTo method - print column labels
 		System.out.println("\nTesting compareTo method (compares the priorities of two tasks):");
 		System.out.printf("%-11s", " priority1");
 		System.out.printf("%-12s", "| priority2");
@@ -47,6 +47,7 @@ public class Application_2 {
 		System.out.println();
 		System.out.println("-----------|-----------|-----------------");
 		
+		// Print result when the two priorities are equal
 		int priority1 = t1.getPriority();
 		int priority2 = t2.getPriority();
 		int compare = t1.compareTo(t2);
@@ -55,6 +56,7 @@ public class Application_2 {
 		System.out.printf("%-16s", "| "+pad(compare));
 		System.out.println();
 		
+		// Set priority1 to be less than priority2 and print result
 		t1.setPriority(Priority.MIN_PRIORITY);
 		priority1 = t1.getPriority();
 		compare = t1.compareTo(t2);
@@ -63,6 +65,7 @@ public class Application_2 {
 		System.out.printf("%-16s", "| "+pad(compare));
 		System.out.println();
 		
+		// Set priority1 to be greater than priority2 and print result
 		t1.setPriority(Priority.MAX_PRIORITY);
 		priority1 = t1.getPriority();
 		compare = t1.compareTo(t2);
@@ -94,7 +97,7 @@ public class Application_2 {
 		System.out.println("p1.toString(): " + p1.toString());
 		System.out.println("p2.toString(): " + p2.toString());
 
-		// Testing compareTo method
+		// Testing compareTo method - print column labels
 		System.out.println("\nTesting compareTo method (compares the priorities of two processes):");
 		System.out.printf("%-11s", " priority1");
 		System.out.printf("%-12s", "| priority2");
@@ -102,6 +105,7 @@ public class Application_2 {
 		System.out.println();
 		System.out.println("-----------|-----------|-----------------");
 		
+		// Print result when the two priorities are equal
 		priority1 = p1.getPriority();
 		priority2 = p2.getPriority();
 		compare = p1.compareTo(p2);
@@ -110,6 +114,7 @@ public class Application_2 {
 		System.out.printf("%-16s", "| "+pad(compare));
 		System.out.println();
 		
+		// Set priority1 to be less than priority2 and print result
 		p1.setPriority(Priority.MIN_PRIORITY);
 		priority1 = p1.getPriority();
 		compare = p1.compareTo(p2);
@@ -118,6 +123,7 @@ public class Application_2 {
 		System.out.printf("%-16s", "| "+pad(compare));
 		System.out.println();
 		
+		// Set priority1 to be greater than priority2 and print result
 		p1.setPriority(Priority.MAX_PRIORITY);
 		priority1 = p1.getPriority();
 		compare = p1.compareTo(p2);
@@ -129,9 +135,9 @@ public class Application_2 {
 	}// end main
 	
 	/**
-	 * Method to pad priority to align the data in the output table.
+	 * Method to pad an integer to align the data in the output table.
 	 * 
-	 * @param priority the priority to be padded
+	 * @param padInt the integer to be padded
 	 * @return the padded string
 	 */
 	public static String pad(int padInt) {
