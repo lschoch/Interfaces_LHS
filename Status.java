@@ -7,7 +7,18 @@
  */
 
 public enum Status { 
+	/**
+	 * The first of the three possible values for the Status data type
+	 */
 	IN_PROCESS,
+	
+	/**
+	 * The second of the three possible values for the Status data type
+	 */
 	COMPLETE,
+	
+	/**
+	 * The third of the three possible values for the Status data type
+	 */
 	NOT_STARTED;
 }//end enum

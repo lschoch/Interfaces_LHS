@@ -1,6 +1,6 @@
 
 /**
- * Driver class to test conpriorityuctors, methods, getters/setters for all classes
+ * Driver class to test constructors, methods, getters/setters for all classes
  * of Problem 2
  * 
  * @author Larry Schoch

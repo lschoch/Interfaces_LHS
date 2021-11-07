@@ -31,6 +31,7 @@ public class Process implements Priority, Comparable<Process> {
 	 * Constructor to create object with common usage. This is the preferred
 	 * constructor.
 	 * 
+	 * @param processID the processID for the object
 	 * @param priority the priority assigned to the object
 	 */
 	public Process(String processID, int priority) {
@@ -41,8 +42,8 @@ public class Process implements Priority, Comparable<Process> {
 
 	/**
 	 * Compares the priorities for this process and the input process. Returns 0 if
-	 * the two are equal, returns -1 if the priority for this process is greater
-	 * than that for the input process, returns 1 if the priority for this process
+	 * the two are equal, returns 1 if the priority for this process is greater
+	 * than that for the input process, returns -1 if the priority for this process
 	 * is less than that for the input process.
 	 */
 	@Override

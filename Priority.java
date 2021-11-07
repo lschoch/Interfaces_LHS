@@ -1,7 +1,7 @@
 
 /**
- * Interface to set priority constants and to require getter and setter for
- * priority.
+ * Interface to set priority constants, includes two abstract methods:
+ * getPriority and setPriority.
  * 
  * @author lschoch
  * @version 1.0 Interfaces_LHS Fall/2021 Interfaces_LHS

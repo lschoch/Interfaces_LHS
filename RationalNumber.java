@@ -143,6 +143,7 @@ public class RationalNumber implements Comparable<RationalNumber> {
 	 * Determines if this rational number is equal to the one passed as a 
 	 * parameter. Assumes they are both reduced.
 	 * 
+	 * @param op2 the reduced rational number to be matched for equality
 	 * @return true if the two rational numbers are equal, false if not
 	 */
 	public boolean isLike(RationalNumber op2) {
@@ -203,9 +204,9 @@ public class RationalNumber implements Comparable<RationalNumber> {
 	/**
 	 * Computes the equivalent numerical floating point values of the
 	 * two RationalNumbers and compares them. Returns 0 if the difference
-	 * between the values is less than the TOLERANCE, returns -1 if the
+	 * between the values is less than the TOLERANCE, returns 1 if the
 	 * floating point value for this RationalNumber is greater than that
-	 * for the input RationalNumber, and returns 1 if it is less than that
+	 * for the input RationalNumber, and returns -1 if it is less than that
 	 * for the input RationalNumber.
 	 * 
 	 * @return the integer indicator of the numerical sort order of the two
