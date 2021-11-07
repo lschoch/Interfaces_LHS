@@ -2,3 +2,7 @@
 /doc/
 *.class
 .DS_Store
+/class-use/
+/index-files/
+/script-dir/
+resources
